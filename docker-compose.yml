@@ -1,0 +1,28 @@
+version: '3.7'
+
+volumes:
+    logs:
+        driver: local
+
+services:
+    slim:
+        build: .
+        working_dir: /var/www
+        environment:
+            docker: "true"
+        ports:
+            - 8000:8000
+        volumes:
+            - .:/var/www
+            - logs:/var/www/logs
+
+    
+    adminer:
+        image: adminer
+        ports:
+            - 8001:8080
+    db:
+        image: mysql
+        command: --default-authentication-plugin=mysql_native_password
+        environment:
+            MYSQL_ROOT_PASSWORD: obodi
