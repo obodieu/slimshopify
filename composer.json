@@ -11,7 +11,7 @@
         "monolog/monolog": "^1.24",
         "php-di/php-di": "^6.0",
         "phpclassic/php-shopify": "^1.1",
-        "slim/psr7": "^0.5",
+        "slim/psr7": "^1.4",
         "slim/slim": "^4.1",
         "slim/twig-view": "^3.0",
         "slince/shopify-api-php": "*",
